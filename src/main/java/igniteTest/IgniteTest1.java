@@ -11,8 +11,7 @@ public class IgniteTest1 {
 
 	public static void main(String[] args) {
 	Ignition.start("ignite-config.xml");
-		Ignition.start("ignite-config.xml");
-		Ignition.start("ignite-config.xml");
+	
 	}
 
 }
