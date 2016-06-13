@@ -2,7 +2,6 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
-    <bean class="igniteTest.SpringContextHolder" />
     <bean  id="abstractConfiguration" class="org.apache.ignite.configuration.CacheConfiguration">
         <property name="startSize" value="#{100000}"/>
         <property name="cacheMode" value="LOCAL"/>
@@ -18,45 +17,6 @@
         <property name="gridName" value="sys_grid"/>
         <property name="cacheConfiguration">
             <list>
-            <bean parent="abstractConfiguration">
-                <property name="name" value="sys_cache_conf"/>
-            </bean>
-                <bean parent="abstractConfiguration">
-                    <property name="name" value="sys_cache_conf1"/>
-                    <property name="queryEntities">
-                        <list>
-                            <bean class="org.apache.ignite.cache.QueryEntity">
-                                <property name="keyType" value="java.lang.Integer"/>
-                                <property name="valueType" value="igniteTest.Person"/>
-
-                                <property name="fields">
-                                    <map>
-                                        <entry key="id" value="java.lang.Long"/>
-                                        <entry key="orgId" value="java.lang.Long"/>
-                                        <entry key="firstName" value="java.lang.String"/>
-                                        <entry key="lastName" value="java.lang.String"/>
-                                        <entry key="resume" value="java.lang.String"/>
-                                        <entry key="salary" value="java.lang.Double"/>
-                                    </map>
-                                </property>
-
-                                <property name="indexes">
-                                    <list>
-                                        <bean class="org.apache.ignite.cache.QueryIndex">
-                                            <constructor-arg value="id"/>
-                                        </bean>
-                                        <bean class="org.apache.ignite.cache.QueryIndex">
-                                            <constructor-arg value="orgId"/>
-                                        </bean>
-                                        <bean class="org.apache.ignite.cache.QueryIndex">
-                                            <constructor-arg value="salary"/>
-                                        </bean>
-                                    </list>
-                                </property>
-                            </bean>
-                        </list>
-                    </property>
-                </bean>
                 <bean parent="abstractConfiguration">
             </bean>
                 <!--Default cache has already been configured (check configuration and assign unique name to each cache-->
