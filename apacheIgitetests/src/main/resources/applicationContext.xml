@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="cacheProvider" class="javax.cache.Caching" factory-method="getCachingProvider"/>
+    <bean class="igniteTest.IgniteInitializer" id="igniteInitializer"/>
+    <bean id="cacheManager" factory-bean="cacheProvider" factory-method="getCacheManager">
+        <constructor-arg index="0"  value="#{igniteInitializer.igniteConfigurationUri}"/>
+        <constructor-arg index="1" value="#{cacheProvider.defaultClassLoader}"/>
+        <constructor-arg index="2">
+            <props>
+            </props>
+        </constructor-arg>
+    </bean>
+
+    <bean id="igniteCacheContainer" class="igniteTest.IgniteCacheContainer" >
+        <constructor-arg ref="cacheManager"/>
+    </bean>
+</beans>
