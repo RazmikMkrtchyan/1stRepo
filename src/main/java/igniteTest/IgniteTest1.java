@@ -10,7 +10,9 @@ import org.apache.ignite.Ignition;
 public class IgniteTest1 {
 
 	public static void main(String[] args) {
-		Ignite ignite=Ignition.start("ignite-config.xml");
+	Ignition.start("ignite-config.xml");
+		Ignition.start("ignite-config.xml");
+		Ignition.start("ignite-config.xml");
 	}
 
 }
