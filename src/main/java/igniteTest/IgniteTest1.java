@@ -10,7 +10,9 @@ import org.apache.ignite.Ignition;
 public class IgniteTest1 {
 
 	public static void main(String[] args) {
-	Ignition.start("ignite-config.xml");
+               Ignite ignite=Ignition.start("ignite-config.xml");
+		IgniteCache<Integer,Integer> cache= ignite.getOrCreateCache("test1");
+		cache.put(1,1);
 	
 	}
 
