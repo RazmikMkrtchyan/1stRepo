@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
     <bean  id="abstractConfiguration" class="org.apache.ignite.configuration.CacheConfiguration">
         <property name="startSize" value="#{100000}"/>
-        <property name="cacheMode" value="PARTITIONED"/>
+        <property name="cacheMode" value="REPLICATED"/>
         <property name="backups" value="0"/>
         <property name="offHeapMaxMemory" value="0"/>
         <property name="memoryMode" value="OFFHEAP_TIERED"/>
