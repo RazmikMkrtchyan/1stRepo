@@ -4,6 +4,10 @@ package igniteTest;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.Ignition;
 
+import org.apache.ignite.IgniteCache;
+import org.apache.ignite.IgniteCompute;
+
+import org.apache.ignite.lang.IgniteRunnable;
 /**
  * Created by Razmik.Mkrtchyan on 5/30/2016.
  */
