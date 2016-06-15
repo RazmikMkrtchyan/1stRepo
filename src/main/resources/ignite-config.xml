@@ -15,6 +15,10 @@
     <bean class="org.apache.ignite.configuration.IgniteConfiguration">
         <property name="peerClassLoadingEnabled" value="false"/>
         <property name="gridName" value="sys_grid"/>
+        <bean class="org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi">
+                <property name="localPort" value="8078"/>
+                
+            </bean>
         <property name="cacheConfiguration">
             <list>
                 <bean parent="abstractConfiguration">
