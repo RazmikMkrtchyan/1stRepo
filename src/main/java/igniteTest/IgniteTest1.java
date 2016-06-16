@@ -14,8 +14,8 @@ public class IgniteTest1 {
 		Ignite ignite=Ignition.start("ignite-config.xml");
 		IgniteCache<Integer,Integer> cache= ignite.getOrCreateCache("test1");
 		cache.put(2,2);
-		IgniteCache<Integer,Integer> cache= ignite.getOrCreateCache("test2");
-		cache.put(1,1);
+		IgniteCache<Integer,Integer> cache1= ignite.getOrCreateCache("test2");
+		cache1.put(1,1);
 
 	}
 
