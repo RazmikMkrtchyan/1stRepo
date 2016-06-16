@@ -13,8 +13,8 @@ public class IgniteTest1 {
 	public static void main(String[] args) {
 		Ignite ignite=Ignition.start("ignite-config.xml");
 		IgniteCache<Integer,Integer> cache= ignite.getOrCreateCache("test1");
-		cache.put(2,2);
-		IgniteCache<Integer,Integer> cache1= ignite.getOrCreateCache("test2");
+		cache.put(1,1);
+		IgniteCache<Integer,Integer> cache1= ignite.getOrCreateCache("test3");
 		cache1.put(1,1);
 
 	}
