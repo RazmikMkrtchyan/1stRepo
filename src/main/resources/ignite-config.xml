@@ -22,7 +22,7 @@
         </property>
        <property name="discoverySpi">
         <bean class="org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi">
-            <property name="localPort" value="8079"/>
+            <property name="localPort" value="8051"/>
 
         </bean>
         </property>
