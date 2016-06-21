@@ -15,17 +15,17 @@
     <bean class="org.apache.ignite.configuration.IgniteConfiguration">
         <property name="peerClassLoadingEnabled" value="false"/>
         <property name="gridName" value="sys_grid"/>
-        <property name="communicationSpi">
+      <!--  <property name="communicationSpi">
             <bean class="org.apache.ignite.spi.communication.tcp.TcpCommunicationSpi">
                 <property name="localPort" value="8078"/>
             </bean>
-        </property>
-     <!--   <property name="discoverySpi">
+        </property>-->
+       <property name="discoverySpi">
        <bean class="org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi">
             <property name="localPort" value="4850"/>
 
         </bean>
-        </property>-->
+        </property>
         <property name="cacheConfiguration">
             <list>
                 <bean parent="abstractConfiguration">
