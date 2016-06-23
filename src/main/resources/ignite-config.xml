@@ -23,7 +23,7 @@
        <property name="discoverySpi">
        <bean class="org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi">
             <property name="localPort" value="4850"/>
-
+            <property name="localAddress" value="192.168.99.101"/>
         </bean>
         </property>
         <property name="cacheConfiguration">
