@@ -17,7 +17,7 @@
         <property name="gridName" value="sys_grid"/>
         <property name="communicationSpi">
             <bean class="org.apache.ignite.spi.communication.tcp.TcpCommunicationSpi">
-                <property name="localPort" value="8079"/>
+                <property name="localPort" value="19100"/>
             </bean>
         </property>
        <property name="discoverySpi">
