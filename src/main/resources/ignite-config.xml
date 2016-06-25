@@ -12,6 +12,11 @@
 
         <property name="copyOnRead" value="false"/>
     </bean>-->
+     <property name="userAttributes">
+            <map>
+                <entry key="ROLE" value="role1"/>
+            </map>
+        </property>
     <bean class="org.apache.ignite.configuration.IgniteConfiguration">
         <property name="peerClassLoadingEnabled" value="false"/>
         <property name="gridName" value="sys_grid"/>
