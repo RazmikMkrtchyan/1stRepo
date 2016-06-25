@@ -2,7 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
-    <bean  id="abstractConfiguration" class="org.apache.ignite.configuration.CacheConfiguration">
+   <!-- <bean  id="abstractConfiguration" class="org.apache.ignite.configuration.CacheConfiguration">
         <property name="startSize" value="#{100000}"/>
         <property name="cacheMode" value="REPLICATED"/>
         <property name="backups" value="0"/>
@@ -11,7 +11,7 @@
         <property name="swapEnabled" value="false"/>
 
         <property name="copyOnRead" value="false"/>
-    </bean>
+    </bean>-->
     <bean class="org.apache.ignite.configuration.IgniteConfiguration">
         <property name="peerClassLoadingEnabled" value="false"/>
         <property name="gridName" value="sys_grid"/>
@@ -26,17 +26,13 @@
             <property name="localAddress" value="192.168.99.100"/>
         </bean>
         </property>
-        <property name="cacheConfiguration">
+     <!--   <property name="cacheConfiguration">
             <list>
                 <bean parent="abstractConfiguration">
             </bean>
-                <!--Default cache has already been configured (check configuration and assign unique name to each cache-->
-                <!--2 cache config same name cannot be-->
-              <!--  <bean parent="abstractConfiguration">
-                    <property name="startSize" value="#{500000}"/>
-                </bean>-->
+             
             </list>
-        </property>
+        </property>-->
     </bean>
 
 </beans>
