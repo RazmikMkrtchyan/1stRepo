@@ -14,17 +14,13 @@
     </bean>-->
     
     <bean class="org.apache.ignite.configuration.IgniteConfiguration">
-          <property name="marshaller">
-        <bean class="org.apache.ignite.marshaller.optimized.OptimizedMarshaller">
-            <property name="requireSerializable" value="false"/>
-        </bean>
-        </property>
+          
             <property name="userAttributes">
             <map>
                 <entry key="ROLE" value="role1"/>
             </map>
         </property>
-        <property name="peerClassLoadingEnabled" value="false"/>
+        <property name="peerClassLoadingEnabled" value="true"/>
         <property name="gridName" value="sys_grid"/>
         <!--<property name="communicationSpi">
             <bean class="org.apache.ignite.spi.communication.tcp.TcpCommunicationSpi">
