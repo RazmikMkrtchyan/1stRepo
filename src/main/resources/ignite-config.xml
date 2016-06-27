@@ -14,7 +14,11 @@
     </bean>-->
     
     <bean class="org.apache.ignite.configuration.IgniteConfiguration">
-          
+          <property name="marshaller">
+        <bean class="org.apache.ignite.marshaller.optimized.OptimizedMarshaller">
+            <property name="requireSerializable" value="false"/>
+        </bean>
+        </property>
             <property name="userAttributes">
             <map>
                 <entry key="ROLE" value="role1"/>
