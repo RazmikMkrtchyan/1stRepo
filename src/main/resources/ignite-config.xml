@@ -14,7 +14,7 @@
     </bean>-->
     
     <bean class="org.apache.ignite.configuration.IgniteConfiguration">
-            <property name="atomicityMode" value="TRANSACTIONAL"/>
+          
             <property name="userAttributes">
             <map>
                 <entry key="ROLE" value="role1"/>
