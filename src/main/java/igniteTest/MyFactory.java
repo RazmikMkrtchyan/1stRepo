@@ -10,6 +10,6 @@ public class MyFactory implements Factory<MyLoader>,Serializable{
 
     @Override
     public MyLoader create() {
-        return new MyLoader(new CustomObj());
+        return new MyLoader(new CustomObj(new NonSerializable("sss")));
     }
 }
