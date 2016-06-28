@@ -13,8 +13,15 @@ import java.util.Map;
  * Created by Razmik on 6/27/2016.
  */
 public class MyLoader extends CacheStoreAdapter<Integer,String> implements Serializable {
+    private CustomObj customObj;
+
+    public MyLoader(CustomObj customObj) {
+        this.customObj = customObj;
+    }
+
     @Override
     public String load(Integer key) throws CacheLoaderException {
+        System.out.println(customObj.getClass());
         return "ssss";
     }
 
